@@ -39,12 +39,12 @@ export default function Home(){
               <h2 className="p4">Recent Events</h2>
               <div className="wrap border-bot-1"> <img src="images/page1-img5.jpg" alt="" className="img-indent"/>
                 <p className="extra-wrap"/><span className="clr-1">At vero eos et accusam</span><br/>
-                  <a href="#" className="link">May 3, 2012</a><br>
+                  <a href="#" className="link">May 3, 2024</a><br>
                   Justo duo dolores et rebum stet clita kasd g</br>ubergreno sea takimata sanctus consetetur sadipscing elitr.
               </div>
               <div className="wrap border-bot-1"> <img src="images/page1-img6.jpg" alt="" className="img-indent"/>
                 <p className="extra-wrap"/><span className="clr-1">At vero eos et accusam</span><br/>
-                  <a href="#" className="link">May 3, 2012</a><br/>
+                  <a href="#" className="link">May 3, 2024</a><br/>
                   Justo duo dolores et rebum stet clita kasd gubergreno sea takimata sanctus consetetur sadipscing elitr.
               </div>
             </div>
