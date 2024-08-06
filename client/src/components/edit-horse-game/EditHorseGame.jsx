@@ -5,19 +5,19 @@ export default function EditHorseGame (){
             <div className="container">
 
                 <h1>Edit Horse Game</h1>
-                <label for="leg-title">Horse Game Name</label>
+                <label htmlFor="leg-title">Horse Game Name</label>
                 <input type="text" id="title" name="title" value=""/>
 
-                <label for="category">Category:</label>
+                <label htmlFor="category">Category:</label>
                 <input type="text" id="category" name="category" value=""/>
 
-                <label for="levels">Competition level:</label>
+                <label htmlFor="levels">Competition level:</label>
                 <input type="number" id="maxLevel" name="maxLevel" min="1" value=""/>
 
-                <label for="game-img">Image:</label>
+                <label htmlFor="game-img">Image:</label>
                 <input type="text" id="imageUrl" name="imageUrl" value=""/>
 
-                <label for="summary">Summary:</label>
+                <label htmlFor="summary">Summary:</label>
                 <textarea name="summary" id="summary"></textarea>
                 <input className="btn submit" type="submit" value="Edit Game"/>
 

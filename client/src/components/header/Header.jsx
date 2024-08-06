@@ -21,6 +21,7 @@ export default function Header(){
     <li><a href="/create-game">Create Game</a></li>
     <li><a href="/login">Login</a></li>
     <li><a href="/register">Register</a></li>
+    <li><a href="/catalog">Catalog</a></li>
     
   </ul>
   <div className="clear"></div>

@@ -1,5 +1,6 @@
 export default function Home(){
     return (
+        
         <section id="content">
         <div className="container_12 top-1">
           <div className="grid_4 box-1"> <img src="./src/images/page1-img1.jpg" alt=""/> <a href="#"><span className="clr-1">Horse</span> Breeding</a> </div>
