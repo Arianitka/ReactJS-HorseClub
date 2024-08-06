@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Footer(){
 
     return (
@@ -5,9 +7,9 @@ export default function Footer(){
         <div className="footer-col-1">
           <h3>Why Us</h3>
           <ul className="list-1">
-            <li><a href="#">Nam liber tepor cum</a></li>
-            <li><a href="#">Soluta nobeleifend option</a></li>
-            <li><a href="#">Congue ni imperdietng</a></li>
+            <li><Link href="#">Nam liber tepor cum</Link></li>
+            <li><Link href="#">Soluta nobeleifend option</Link></li>
+            <li><Link href="#">Congue ni imperdietng</Link></li>
           </ul>
         </div>
         <div className="footer-col-2">
@@ -22,12 +24,12 @@ export default function Footer(){
           <h3>Newsletter</h3>
           <form id="form-search" method="post" action="#">
             <input type="text" value="" onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''"/>
-            <a href="#"></a>
+            <Link href="#"></Link>
           </form>
         </div>
         <div className="footer-col-4">
           <p>© 2012 Horse Club<br/>
-            Website Template by <a target="_blank" href="http://www.templatemonster.com/" className="link">TemplateMonster.com</a></p>
+            Website Template by <Link target="_blank" href="http://www.templatemonster.com/" className="link">TemplateMonster.com</Link></p>
         </div>
       </footer>
     )

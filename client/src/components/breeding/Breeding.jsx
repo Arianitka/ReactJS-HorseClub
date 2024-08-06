@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom"
 export default function Breeding(){
     return (
         <section id="content">
@@ -8,15 +10,15 @@ export default function Breeding(){
         <div> <img src="./src/images/page2-img1.jpg" alt=""/>
           <p className="text-1 top-2 p3">Lorem ipsum</p>
           <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.</p>
-          <a href="#" className="button top-3">Read More</a> </div>
+          <Link href="#" className="button top-3">Read More</Link> </div>
         <div> <img src="./src/images/page2-img2.jpg" alt=""/>
           <p className="text-1 top-2 p3">Consetetur sadipscing</p>
           <p>Duo dolores et ea rebum stet clita kasd gubergren, no sea takimata sanctus est lorem ipsum. dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-          <a href="#" className="button top-3">Read More</a> </div>
+          <Link href="#" className="button top-3">Read More</Link> </div>
         <div className="last"> <img src="./src/images/page2-img3.jpg" alt=""/>
           <p className="text-1 top-2 p3">Diam nonumy</p>
           <p>Eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-          <a href="#" className="button top-3">Read More</a> </div>
+          <Link href="#" className="button top-3">Read More</Link> </div>
       </div>
     </div>
     <div className="grid_12">
@@ -26,12 +28,12 @@ export default function Breeding(){
       <h2 className="p5">Horse Breeds</h2>
       <p className="p3">Mata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore:</p>
       <ul className="list-2">
-        <li><a href="#">Magna aliquyam erat sed diam</a></li>
-        <li><a href="#">At vero eos et accusam</a></li>
-        <li><a href="#">Stet clita kasd gubergren sea takimata</a></li>
-        <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-        <li><a href="#">Consetetur sadipscing elitr sed</a></li>
-        <li><a href="#">Diam nonumy eirmod</a></li>
+        <li><Link href="#">Magna aliquyam erat sed diam</Link></li>
+        <li><Link href="#">At vero eos et accusam</Link></li>
+        <li><Link href="#">Stet clita kasd gubergren sea takimata</Link></li>
+        <li><Link href="#">Lorem ipsum dolor sit amet</Link></li>
+        <li><Link href="#">Consetetur sadipscing elitr sed</Link></li>
+        <li><Link href="#">Diam nonumy eirmod</Link></li>
       </ul>
     </div>
     <div className="grid_8">

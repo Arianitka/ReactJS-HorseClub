@@ -1,27 +1,29 @@
+import { Link } from "react-router-dom";
+
 export default function Header(){
     return (
     <header>
   <div className="main">
     <h1>Happy Horse</h1>
     <div className="social-icons"> <span>Follow Us:</span>
-      <div> <a href="#" className="icon-3"></a> <a href="#" className="icon-2"></a> <a href="#" className="icon-1"></a> </div>
+      <div> <Link href="#" className="icon-3"></Link> <Link href="#" className="icon-2"></Link> <Link href="#" className="icon-1"></Link> </div>
     </div>
     <div className="clear"></div>
   </div>
   <nav>
   <ul className="menu">
-    <li className="current"><a href="/">Home</a></li>
-    <li><a href="/breeding">Breeding</a></li>
-    <li><a href="/sale">Horse Sale</a></li>
-    <li><a href="/events">Events</a></li>
-    <li><a href="/gallery">Gallery</a></li>
-    <li><a href="/contacts">Contacts</a></li>
-    <li><a href="/details">Details</a></li>
-    <li><a href="/edit-game">Edit Game</a></li>
-    <li><a href="/create-game">Create Game</a></li>
-    <li><a href="/login">Login</a></li>
-    <li><a href="/register">Register</a></li>
-    <li><a href="/catalog">Catalog</a></li>
+    <li className="current"><Link href="/">Home</Link></li>
+    <li><Link href="/breeding">Breeding</Link></li>
+    <li><Link href="/sale">Horse Sale</Link></li>
+    <li><Link href="/events">Events</Link></li>
+    <li><Link href="/gallery">Gallery</Link></li>
+    <li><Link ref="/contacts">Contacts</Link></li>
+    <li><Link href="/details">Details</Link></li>
+    <li><Link href="/edit-game">Edit Game</Link></li>
+    <li><Link href="/create-game">Create Game</Link></li>
+    <li><Link href="/login">Login</Link></li>
+    <li><Link href="/register">Register</Link></li>
+    <li><Link href="/catalog">Catalog</Link></li>
     
   </ul>
   <div className="clear"></div>

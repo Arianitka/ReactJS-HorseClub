@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Home(){
     return (
         
@@ -14,7 +16,7 @@ export default function Home(){
             <img src="./src/images/page1-img4.jpg" alt=""/>
             <p className="text-1 top-2 p3">Lorem ipsum dolor sit amet</p>
             <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.</p>
-            <a href="#" className="button top-3">Read More</a> </div>
+            <Link href="#" className="button top-3">Read More</Link> </div>
           <div className="grid_4">
             <div className="left-1">
               <h2 className="p4">Our Breeds</h2>
@@ -40,12 +42,12 @@ export default function Home(){
               <h2 className="p4">Recent Events</h2>
               <div className="wrap border-bot-1"> <img src="./src/images/page1-img5.jpg" alt="" className="img-indent"/>
                 <p className="extra-wrap"/><span className="clr-1">At vero eos et accusam</span>
-                  <a href="#" className="link">May 3, 2024</a>
+                  <Link href="#" className="link">May 3, 2024</Link>
                   Justo duo dolores et rebum stet clita kasd gubergreno sea takimata sanctus consetetur sadipscing elitr.
               </div>
               <div className="wrap border-bot-1"> <img src="./src/images/page1-img6.jpg" alt="" className="img-indent"/>
                 <p className="extra-wrap"/><span className="clr-1">At vero eos et accusam</span>
-                  <a href="#" className="link">May 3, 2024</a>
+                  <Link href="#" className="link">May 3, 2024</Link>
                   Justo duo dolores et rebum stet clita kasd gubergreno sea takimata sanctus consetetur sadipscing elitr.
               </div>
             </div>

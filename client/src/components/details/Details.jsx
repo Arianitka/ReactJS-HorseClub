@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+
+
 export default function Details () {
     return (
         <section id="horse-details">
@@ -30,8 +33,8 @@ export default function Details () {
                 <p className="no-comment">No comments.</p>
             </div>
             <div className="buttons">
-                <a href="#" className="button">Edit</a>
-                <a href="#" className="button">Delete</a>
+                <Link href="#" className="button">Edit</Link>
+                <Link href="#" className="button">Delete</Link>
             </div>
         </div>
 

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function HorseCatalog (){
 
     return (
@@ -8,7 +10,7 @@ export default function HorseCatalog (){
                     <img src="./src/images/gallery-1.jpg"/>
                     <h6>Sport</h6>
                     <h2>Fire</h2>
-                    <a href="#" className="details-button">Details</a> 
+                    <Link href="#" className="details-button">Details</Link> 
                 </div>
 
             </div>
@@ -17,7 +19,7 @@ export default function HorseCatalog (){
                     <img src="./src/images/gallery-2.jpg"/>
                     <h6>Sport</h6>
                     <h2>Lighitning</h2>
-                    <a href="#" className="details-button">Details</a>
+                    <Link href="#" className="details-button">Details</Link>
                 </div>
 
             </div>
@@ -26,7 +28,7 @@ export default function HorseCatalog (){
                     <img src="./src/images/gallery-3.jpg"/>
                     <h6>Fun</h6>
                     <h2>Horhe</h2>
-                    <a href="#" className="details-button">Details</a>
+                    <Link href="#" className="details-button">Details</Link>
                 </div>
             </div>
 
