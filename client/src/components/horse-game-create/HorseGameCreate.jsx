@@ -1,8 +1,8 @@
 export default function HorseGameCreate(){
     return(
-        <section id="create-page" class="auth">
+        <section id="create-page" className="auth">
         <form id="create">
-            <div class="container">
+            <div className="container">
 
                 <h1>Create Horse Game</h1>
                 <label htmlFor="leg-title">Horse Game Name:</label>
@@ -19,7 +19,7 @@ export default function HorseGameCreate(){
 
                 <label htmlFor="summary">Summary:</label>
                 <textarea name="summary" id="summary"></textarea>
-                <input class="btn submit" type="submit" value="Create Game"/>
+                <input className="btn submit" type="submit" value="Create Game"/>
             </div>
         </form>
     </section>

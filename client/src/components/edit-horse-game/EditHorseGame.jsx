@@ -1,8 +1,8 @@
 export default function EditHorseGame (){
     return (
-        <section id="edit-page" class="auth">
+        <section id="edit-page" className="auth">
         <form id="edit">
-            <div class="container">
+            <div className="container">
 
                 <h1>Edit Horse Game</h1>
                 <label for="leg-title">Horse Game Name</label>
@@ -19,7 +19,7 @@ export default function EditHorseGame (){
 
                 <label for="summary">Summary:</label>
                 <textarea name="summary" id="summary"></textarea>
-                <input class="btn submit" type="submit" value="Edit Game"/>
+                <input className="btn submit" type="submit" value="Edit Game"/>
 
             </div>
         </form>
