@@ -14,5 +14,13 @@
         "imageUrl": "https://i.ytimg.com/vi/qIWEXiEcLhM/maxresdefault.jpg",
         "summary": "Take care of the horses in the hotel every day",
         "_id": "24efa629-8665-4b4f-bb2c-ee27a01589a4"
+    },
+    "67dececc-338a-4f9f-84ee-a507288b6f06": {
+        "title": "Star Stable ",
+        "category": "Simulator",
+        "maxLevel": "1000",
+        "imageUrl": "https://i.ytimg.com/vi/ZKBUzbq3LPk/maxresdefault.jpg",
+        "summary": "Star stable allows you to live up the adventure of having your own horse and live your dream",
+        "_id": "67dececc-338a-4f9f-84ee-a507288b6f06"
     }
 }
