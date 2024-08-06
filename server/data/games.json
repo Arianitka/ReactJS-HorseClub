@@ -1,0 +1,18 @@
+{
+    "573256b1-f267-4107-8ede-f1511b68da51": {
+        "title": "Horse Care game",
+        "category": "Fun",
+        "maxLevel": "100",
+        "imageUrl": "https://i.ytimg.com/vi/FFFHNYFfkt4/maxresdefault.jpg",
+        "summary": "Take care of the horses in the barn",
+        "_id": "573256b1-f267-4107-8ede-f1511b68da51"
+    },
+    "24efa629-8665-4b4f-bb2c-ee27a01589a4": {
+        "title": "Horse Hotel ",
+        "category": "Fun",
+        "maxLevel": "50",
+        "imageUrl": "https://i.ytimg.com/vi/qIWEXiEcLhM/maxresdefault.jpg",
+        "summary": "Take care of the horses in the hotel every day",
+        "_id": "24efa629-8665-4b4f-bb2c-ee27a01589a4"
+    }
+}

@@ -12,7 +12,7 @@ import Gallery from './components/gallery/Gallery';
 import HorseGameCreate from './components/horse-game-create/HorseGameCreate';
 import Sale from './components/sale/Sale';
 import Details from './components/details/Details';
-import HorseCatalog from './components/horse-catalog/HorseCatalog';
+import HorseGameCatalog from './components/horse-game-catalog/HorseGameCatalog';
 
 
 function App(){
@@ -30,7 +30,7 @@ function App(){
             <Route path='/edit-game' element={<EditHorseGame />}/>
             <Route path='/events' element={<Events />}/>
             <Route path='/gallery' element={<Gallery />}/>
-            <Route path='/catalog' element={<HorseCatalog />}/>
+            <Route path='/catalog' element={<HorseGameCatalog />}/>
             <Route path='/create-game' element={<HorseGameCreate/>}/>
             <Route path='/sale' element={<Sale/>}/>
             
