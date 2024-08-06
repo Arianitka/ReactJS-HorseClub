@@ -1,6 +1,6 @@
 export default function Header(){
     return (
-        <header>
+    <header>
   <div className="main">
     <h1>Happy Horse</h1>
     <div className="social-icons"> <span>Follow Us:</span>
@@ -20,8 +20,6 @@ export default function Header(){
   <div className="clear"></div>
 </nav>
 </header>
-
-        
 
     );
 }
