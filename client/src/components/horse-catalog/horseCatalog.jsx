@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
+import * as gamesApi from '../../api/games-api';
+import { useEffect } from "react";
+
 
 export default function HorseCatalog (){
+    const [games, setGames] = useState([]);
+    
+    useEffect(() => {
+        gamesApi.getAll()
+        .then (result => setGames(result))
+    }, []);
     return (
         <section id="catalog-page">
             <h1>All Horses</h1>
