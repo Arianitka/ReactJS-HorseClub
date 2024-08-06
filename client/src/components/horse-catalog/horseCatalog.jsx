@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function HorseCatalog (){
-
     return (
         <section id="catalog-page">
             <h1>All Horses</h1>
