@@ -15,7 +15,7 @@ export default function HorseCatalog (){
     }, []);
     return (
         <section id="catalog-page">
-            <h1>All Horses</h1>    
+            <h1>Horse Games</h1>    
             {games.length > 0
             ?games.map(game=> <GameListItem key={game._id} {...game} />)
             :  <h3 className="no-articles">No games yet</h3>

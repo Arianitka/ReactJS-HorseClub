@@ -15,7 +15,7 @@ export default function Contacts(){
         <dd><span>Telephone: </span>+1 800 603 6035
           <div className=""></div>
         </dd>
-        <dd><span>E-mail: </span><Link to="/login" className="link">mail@demolink.org</Link></dd>
+        <dd><span>E-mail: </span><Link to={`/login`} className="link">mail@demolink.org</Link></dd>
       </dl>
     </div>
     <div className="grid_8">
@@ -35,7 +35,7 @@ export default function Contacts(){
             <label><strong>Message:</strong>
               <textarea></textarea>
             </label>
-            <div className="btns"><Link to="#" className="button">Clear</Link><Link to="#" className="button">Send</Link></div>
+            <div className="btns"><Link to={`/`} className="button">Clear</Link><Link to={`/`} className="button">Send</Link></div>
           </fieldset>
         </form>
       </div>

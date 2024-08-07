@@ -10,15 +10,15 @@ export default function Breeding(){
         <div> <img src="./src/images/page2-img1.jpg" alt=""/>
           <p className="text-1 top-2 p3">Lorem ipsum</p>
           <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.</p>
-          <Link to="/details" className="button top-3">Read More</Link> </div>
+          <Link to={`/details`} className="button top-3">Read More</Link> </div>
         <div> <img src="./src/images/page2-img2.jpg" alt=""/>
           <p className="text-1 top-2 p3">Consetetur sadipscing</p>
           <p>Duo dolores et ea rebum stet clita kasd gubergren, no sea takimata sanctus est lorem ipsum. dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-          <Link to="/details" className="button top-3">Read More</Link> </div>
+          <Link to={`/details`} className="button top-3">Read More</Link> </div>
         <div className="last"> <img src="./src/images/page2-img3.jpg" alt=""/>
           <p className="text-1 top-2 p3">Diam nonumy</p>
           <p>Eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-          <Link to="/details" className="button top-3">Read More</Link> </div>
+          <Link to={`/details`} className="button top-3">Read More</Link> </div>
       </div>
     </div>
     <div className="grid_12">
@@ -28,12 +28,12 @@ export default function Breeding(){
       <h2 className="p5">Horse Breeds</h2>
       <p className="p3">Mata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore:</p>
       <ul className="list-2">
-        <li><Link to="/details">Magna aliquyam erat sed diam</Link></li>
-        <li><Link to="/details">At vero eos et accusam</Link></li>
-        <li><Link to="/details">Stet clita kasd gubergren sea takimata</Link></li>
-        <li><Link to="/details">Lorem ipsum dolor sit amet</Link></li>
-        <li><Link to="/details">Consetetur sadipscing elitr sed</Link></li>
-        <li><Link to="/details">Diam nonumy eirmod</Link></li>
+        <li><Link to={`/details`}>Magna aliquyam erat sed diam</Link></li>
+        <li><Link to={`/details`}>At vero eos et accusam</Link></li>
+        <li><Link to={`/details`}>Stet clita kasd gubergren sea takimata</Link></li>
+        <li><Link to={`/details`}>Lorem ipsum dolor sit amet</Link></li>
+        <li><Link to={`/details`}>Consetetur sadipscing elitr sed</Link></li>
+        <li><Link to={`/details`}>Diam nonumy eirmod</Link></li>
       </ul>
     </div>
     <div className="grid_8">

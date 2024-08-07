@@ -33,8 +33,8 @@ export default function Details () {
                 <p className="no-comment">No comments.</p>
             </div>
             <div className="buttons">
-                <Link to="/edit-game" className="button">Edit</Link>
-                <Link to="/delete-game" className="button">Delete</Link>
+                <Link to={`/edit-game`} className="button">Edit</Link>
+                <Link to={`/delete-game`} className="button">Delete</Link>
             </div>
         </div>
 

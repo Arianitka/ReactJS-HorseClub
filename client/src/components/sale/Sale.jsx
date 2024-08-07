@@ -30,17 +30,17 @@ export default function Sale(){
             <p className="text-1 top-2 p3">Consete sadipscing</p>
             <p className="clr-1 p3">Nam liber tepor soluta nobis eleifed option congue nihil imperdiet </p>
             <p>Doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam </p>
-            <Link to="#" className="button top-3">Read More</Link> </div>
+            <Link to={``} className="button top-3">Read More</Link> </div>
           <div> <img src="images/page3-img2.jpg" alt=""/>
             <p className="text-1 top-2 p3">Elitr sed diam</p>
             <p className="clr-1 p3">Mibh euismod tincidunt ut laoreet dolore agna aliquam erat volutpat. </p>
             <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-            <Link to="#" className="button top-3">Read More</Link> </div>
+            <Link to={``} className="button top-3">Read More</Link> </div>
           <div className="last"> <img src="images/page3-img3.jpg" alt=""/>
             <p className="text-1 top-2 p3">Rirmod tempor</p>
             <p className="clr-1 p3">Duis autem vel eum iriure dolor in hendrerit in vulptate velit esse.</p>
             <p>Consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim quiandit praesent zzril.</p>
-            <Link to="#" className="button top-3">Read More</Link> </div>
+            <Link to={``} className="button top-3">Read More</Link> </div>
         </div>
       </div>
     </div>
