@@ -16,7 +16,7 @@ export default function Home(){
             <img src="./src/images/page1-img4.jpg" alt=""/>
             <p className="text-1 top-2 p3">Lorem ipsum dolor sit amet</p>
             <p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo.</p>
-            <Link to={`/details`} className="button top-3">Read More</Link> </div>
+            <Link to={`/events`} className="button top-3">Read More</Link> </div>
           <div className="grid_4">
             <div className="left-1">
               <h2 className="p4">Our Breeds</h2>

@@ -31,6 +31,7 @@ function App(){
             <Route path='/events' element={<Events />}/>
             <Route path='/gallery' element={<Gallery />}/>
             <Route path='/catalog' element={<HorseGameCatalog />}/>
+            <Route path='/catalog/:gameId/details' element={<Details />}/>
             <Route path='/create-game' element={<HorseGameCreate/>}/>
             <Route path='/sale' element={<Sale/>}/>
             

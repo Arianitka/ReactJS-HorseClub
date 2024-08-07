@@ -1,22 +1,33 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import gamesAPI from "../../api/games-api";
+import { useEffect, useState } from "react";
+
 
 
 export default function Details () {
+    const [game, setGame] = useState({});
+    const {gameId} = useParams();
+
+    useEffect(() => {
+        (async () => {
+          const result = await gamesAPI.getOne(gameId);
+
+          setGame(result);
+        })();
+    })
     return (
-        <section id="horse-details">
-        <h1>Horse Details</h1>
+        <section id="game-details">
+        <h1>Game Details</h1>
         <div className="info-section">
 
-            <div className="horse-header">
-                <img className="horse-img" src="" />
-                <h1>Lightning</h1>
-                <span className="levels">Competition level: 4</span>
-                <p className="type">Sport, Fun, Therapy</p>
+            <div className="game-header">
+                <img className="game-img" src={game.imageUrl} />
+                <h1>{game.title}</h1>
+                <span className="levels">{game.maxLevel}</span>
+                <p className="type">{game.category}</p>
             </div>
 
-            <p className="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem provident cupiditate iste molestiae explicabo a? Nam itaque eum ab maiores exercitationem ratione ullam harum, aut deleniti totam incidunt libero vel!
-            </p>
+            <p className="text">{game.summary}</p>
 
             <div className="details-comments">
                 <h2>Comments:</h2>
@@ -26,7 +37,7 @@ export default function Details () {
                         <p>Content: I rate this one quite highly.</p>
                     </li>
                     <li className="comment">
-                        <p>Content: The best horse.</p>
+                        <p>Content: The best game.</p>
                     </li>
                 </ul>
 
