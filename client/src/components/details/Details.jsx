@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import gamesAPI from "../../api/games-api";
-import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 
 
 export default function Details () {
     const [game, setGame] = useState({});
+    const [username, setUsername] = useState('');
+    const [comment, setComment] = useState('')
     const {gameId} = useParams();
 
     useEffect(() => {
@@ -14,7 +17,17 @@ export default function Details () {
 
           setGame(result);
         })();
-    })
+    }, []);
+
+    const submitComment = async (e) => {
+        e.preventDefault();
+
+        await commentsApi.create(gameId, username, comment);
+
+        console.log(username);
+        console.log(comment);
+        console.log('Comment submitted');
+    }
     return (
         <section id="game-details">
         <h1>Game Details</h1>
@@ -43,16 +56,30 @@ export default function Details () {
 
                 <p className="no-comment">No comments.</p>
             </div>
-            <div className="buttons">
+            {/* <div className="buttons">
                 <Link to={`/edit-game`} className="button">Edit</Link>
                 <Link to={`/delete-game`} className="button">Delete</Link>
-            </div>
+            </div> */}
         </div>
 
         <article className="create-comment">
             <label>Add new comment:</label>
-            <form className="form">
-                <textarea name="comment" placeholder="Comment......"></textarea>
+            <form className="form" onSubmit = {submitComment}>
+                <input 
+                type="text"
+                 placeholder="Pesho"
+                  name="username"
+                  onChange={() => setUsername(e.target.value)} 
+                  value={username}
+                  />
+                <textarea 
+                name="comment" 
+                placeholder="Comment......"
+                onChange={() => setComment(e.target.value)}
+                value={comment}
+                >
+
+                </textarea>
                 <input className="btn submit" type="submit" value="Add Comment"/>
             </form>
         </article>
