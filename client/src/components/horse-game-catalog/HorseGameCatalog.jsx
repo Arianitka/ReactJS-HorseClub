@@ -6,7 +6,7 @@ import * as gamesApi from '../../api/games-api';
 import GameListItem from "./game-list-item/GameListItem";
 
 
-export default function HorseCatalog (){
+export default function HorseGameCatalog (){
     const [games, setGames] = useState([]);
 
     useEffect(() => {
@@ -18,7 +18,7 @@ export default function HorseCatalog (){
             <h1>Horse Games</h1>    
             {games.length > 0
             ?games.map(game=> <GameListItem key={game._id} {...game} />)
-            :  <h3 className="no-articles">No games yet</h3>
+            :  <p className="no-articles">No games yet</p>
             }
         </section>
     )
