@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import gamesAPI from "../../api/games-api";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import commentsApi from "../../api/comments-api";
 
 
 
@@ -22,11 +23,19 @@ export default function Details () {
     const submitComment = async (e) => {
         e.preventDefault();
 
-        await commentsApi.create(gameId, username, comment);
+        const newComment = await commentsApi.create(gameId, username, comment);
+        
+        setGame(prevState => ({
+            ...prevState,
+            comments: {
+                ...prevState.comments,
+                [newComment._id]: newComment,
+            }
+        }));
 
-        console.log(username);
-        console.log(comment);
-        console.log('Comment submitted');
+        setUsername ('');
+        setComment ('')
+    
     }
     return (
         <section id="game-details">
@@ -45,16 +54,19 @@ export default function Details () {
             <div className="details-comments">
                 <h2>Comments:</h2>
                 <ul>
+                {Object.keys(game.comments || {}).length > 0
+                ? Object.values(game.comments).map(comment => (
+                         <li key={comment._id}  className="comment">
+                    <p>{comment.username}: {comment.text}</p>
+                    </li>  
                     
-                    <li className="comment">
-                        <p>Content: I rate this one quite highly.</p>
-                    </li>
-                    <li className="comment">
-                        <p>Content: The best game.</p>
-                    </li>
-                </ul>
-
-                <p className="no-comment">No comments.</p>
+                
+                  ))
+                :<p className="no-comment">No comments.</p>
+                
+                 }
+                 </ul>
+   
             </div>
             {/* <div className="buttons">
                 <Link to={`/edit-game`} className="button">Edit</Link>
