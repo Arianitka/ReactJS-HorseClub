@@ -13,6 +13,7 @@ import HorseGameCreate from './components/horse-game-create/HorseGameCreate';
 import Sale from './components/sale/Sale';
 import Details from './components/details/Details';
 import HorseGameCatalog from './components/horse-game-catalog/HorseGameCatalog';
+import Footer from './components/footer/Footer';
 
 
 function App(){
@@ -36,10 +37,12 @@ function App(){
             <Route path='/sale' element={<Sale/>}/>
             
             
+            
 
                 </Routes>   
 
             </main>
+            <Footer />
 
         </div>
     )

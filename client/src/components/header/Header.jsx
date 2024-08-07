@@ -4,7 +4,7 @@ export default function Header(){
     return (
     <header>
   <div className="main">
-    <h1>Happy Horse</h1>
+  <h1><Link to="index.html"><img src="./src/images/logo.png" alt=""/></Link></h1>
     <div className="social-icons"> <span>Follow Us:</span>
       <div> <Link to={``} className="icon-3"></Link> <Link to={``} className="icon-2"></Link> <Link to={``} className="icon-1"></Link> </div>
     </div>
@@ -12,7 +12,7 @@ export default function Header(){
   </div>
   <nav>
   <ul className="menu">
-    <li className="current"><Link to="/">Home</Link></li>
+    <li className="current"><Link to={`/`}>Home</Link></li>
     <li><Link to={`/breeding`}>Breeding</Link></li>
     <li><Link to={`/sale`}>Horse Sale</Link></li>
     <li><Link to={`/events`}>Events</Link></li>

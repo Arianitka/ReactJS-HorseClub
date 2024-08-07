@@ -5,9 +5,9 @@ export default function Home(){
         
         <section id="content">
         <div className="container_12 top-1">
-          <div className="grid_4 box-1"> <img src="./src/images/page1-img1.jpg" alt=""/> <a to="#"><span className="clr-1">Horse</span> Breeding</a> </div>
-          <div className="grid_4 box-1"> <img src="./src/images/page1-img2.jpg" alt=""/> <a to="#"><span className="clr-1">Horse</span> Sale</a> </div>
-          <div className="grid_4 box-1"> <img src="./src/images/page1-img3.jpg" alt=""/> <a to="#"><span className="clr-1">Horse</span> Events</a> </div>
+          <div className="grid_4 box-1"> <img src="./src/images/page1-img1.jpg" alt=""/> <Link to={`/breeding`}><span className="clr-1">Horse</span> Breeding</Link> </div>
+          <div className="grid_4 box-1"> <img src="./src/images/page1-img2.jpg" alt=""/> <Link to={`/sale`}><span className="clr-1">Horse</span> Sale</Link> </div>
+          <div className="grid_4 box-1"> <img src="./src/images/page1-img3.jpg" alt=""/> <Link to={`/events`}><span className="clr-1">Horse</span> Events</Link> </div>
           <div className="grid_12">
             <div className="line pad-1"></div>
           </div>
