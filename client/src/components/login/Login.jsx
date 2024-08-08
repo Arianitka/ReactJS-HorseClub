@@ -4,10 +4,11 @@ export default function Login () {
     return (
         <section id="login-page" className="auth">
         <form id="login">
+        <h1>Login</h1>
 
             <div className="container">
                 <div className="brand-logo"></div>
-                <h1>Login</h1>
+        
                 <label htmlFor="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Sokka@gmail.com"/>
 

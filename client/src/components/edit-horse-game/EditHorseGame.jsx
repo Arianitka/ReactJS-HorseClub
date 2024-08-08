@@ -4,7 +4,7 @@ export default function EditHorseGame (){
         <form id="edit">
             <div className="container">
 
-                <h1>Edit Horse Game</h1>
+                
                 <label htmlFor="leg-title">Horse Game Name</label>
                 <input type="text" id="title" name="title" value=""/>
 

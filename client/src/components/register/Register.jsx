@@ -4,10 +4,10 @@ export default function Register(){
     return (
         <section id="register-page" className="content auth">
         <form id="register">
+        <h1>Register</h1>
             <div className="container">
                 <div className="brand-logo"></div>
-                <h1>Register</h1>
-
+               
                 <label htmlFor="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="maria@email.com"/>
 

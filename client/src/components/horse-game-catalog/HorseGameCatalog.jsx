@@ -4,15 +4,11 @@ import { useEffect, useState } from "react";
 import * as gamesApi from '../../api/games-api';
 
 import GameListItem from "./game-list-item/GameListItem";
+import { useGetAllGames } from "../../hooks/useGames";
 
 
 export default function HorseGameCatalog (){
-    const [games, setGames] = useState([]);
-
-    useEffect(() => {
-        gamesApi.getAll()
-        .then (result => setGames(result))
-    }, []);
+    const [games] = useGetAllGames()
     return (
         <section id="catalog-page">
             <h1>Horse Games</h1>    
