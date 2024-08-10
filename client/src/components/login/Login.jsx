@@ -2,12 +2,14 @@ import { Link, useNavigate } from "react-router-dom"
 import { useForm } from "../../hooks/useForm"
 import { useLogin } from "../../hooks/useAuth"
 
-const initialValues = { email: '', password:''};
+
 
 export default function Login() {
+    const initialValues = { email: '', password:''};
     const login = useLogin();
     const navigate = useNavigate();
     const loginHandler = async ({ email, password }) => {
+   
         try {
             await login(email, password)
             navigate('/');

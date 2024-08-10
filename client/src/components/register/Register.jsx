@@ -1,11 +1,10 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useRegister } from "../../hooks/useAuth"
 import { useForm } from "../../hooks/useForm";
-import { useState } from "react";
-
-const initialValues = { email: '', password: '', 'confirm-password': '' };
+import { useEffect, useState } from "react";
 
 export default function Register() {
+    const initialValues = { email: '', password: '', 'confirm-password': '' };
     const [error, setError] = useState('')
     const register = useRegister();
     const navigate = useNavigate();
@@ -29,6 +28,7 @@ export default function Register() {
         submitHandler,
     } = useForm(initialValues, registerHandler);
 
+
     return (
         <section id="register-page" className="content auth">
             <form id="register" onSubmit={submitHandler}>
@@ -41,7 +41,7 @@ export default function Register() {
                         type="email"
                         id="email"
                         name="email"
-                        value={values.email}
+                        value={values['email']}
                         onChange={changeHandler}
                         placeholder="maria@email.com"
                     />

@@ -17,13 +17,13 @@ export default function Footer(){
           <dl className="adress">
             <dd><span>Country:</span>USA</dd>
             <dd><span>City:</span>San Diego</dd>
-            <dd><span>Email:</span><Link to={``} className="link">lcenter@mail.com</Link></dd>
+            <dd><span>Email:</span><Link to={`/contacts`} className="link">lcenter@mail.com</Link></dd>
           </dl>
         </div>
         <div className="footer-col-3">
           <h3>Newsletter</h3>
           <form id="form-search" method="post" action="#">
-            <input type="text" value="" onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''"/>
+            {/* <input type="text" value="" onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''"/> */}
             <Link to={`/contacts`}></Link>
           </form>
         </div>

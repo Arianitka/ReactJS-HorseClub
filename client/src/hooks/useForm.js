@@ -6,11 +6,11 @@ import { useState } from "react";
     const changeHandler = (e) => {
         setValues(state => ({
             ...state,
-            [e.target.nname] : e.target.value
+            [e.target.name] : e.target.value
         }));
     };
 
-    const submitHandler = () => {
+    const submitHandler = (e) => {
         e.preventDefault();
         
         submitCallback(values);
