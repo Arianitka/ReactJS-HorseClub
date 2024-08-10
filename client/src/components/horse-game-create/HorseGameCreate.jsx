@@ -1,24 +1,67 @@
+import { useForm } from "../../hooks/useForm"
+import { useNavigate } from 'react-router-dom'
+import { useCreateGame } from "../../hooks/useGames";
+
+const initialValues = {
+    title: '',
+    category: '',
+    maxLevel:'',
+    imageUrl:'',
+    summary: '',
+}
+
 export default function HorseGameCreate(){
+
+    const navigate = useNavigate();
+    const createGame = useCreateGame();
+
+
+    const createHandler = async(values) => {
+        try {
+            const { _id: gameId } = await createGame(values);
+
+            navigate(`/games/${gameId}/details`)
+        } catch (err) {
+            console.log(err.message);
+
+        }
+       
+    };
+    const {
+        values,
+        changeHandler,
+        submitHandler,
+    } = useForm(initialValues, createHandler);
+
+    
+    
     return(
         <section id="create-page" className="auth">
-        <form id="create">
+        <form id="create" onSubmit={submitHandler}>
             <div className="container">
 
                 <h1>Create Horse Game</h1>
                 <label htmlFor="leg-title">Horse Game Name:</label>
-                <input type="text" id="title" name="title" placeholder="Enter game title..."/>
+                <input type="text" id="title" name="title"
+                value={values.title}
+                onChange={changeHandler}
+                 placeholder="Enter game title..."/>
 
                 <label htmlFor="category">Category:</label>
-                <input type="text" id="category" name="category" placeholder="Enter game category..."/>
+                <input type="text" id="category" name="category"  value={values.category}
+                onChange={changeHandler} placeholder="Enter game category..."/>
 
-                <label htmlFor="levels">Competition level:</label>
-                <input type="number" id="maxLevel" name="maxLevel" min="1" placeholder="1"/>
+                <label htmlFor="levels">MaxLevel:</label>
+                <input type="number" id="maxLevel" name="maxLevel" value={values.maxLevel}
+                onChange={changeHandler}  min="1" placeholder="1"/>
 
                 <label htmlFor="game-img">Image:</label>
-                <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..."/>
+                <input type="text" id="imageUrl" name="imageUrl"  value={values.imageUrl}
+                onChange={changeHandler} placeholder="Upload a photo..."/>
 
                 <label htmlFor="summary">Summary:</label>
-                <textarea name="summary" id="summary"></textarea>
+                <textarea name="summary"  value={values.summary}
+                onChange={changeHandler} id="summary"></textarea>
                 <input className="btn submit" type="submit" value="Create Game"/>
             </div>
         </form>
