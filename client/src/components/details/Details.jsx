@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import gamesAPI from "../../api/games-api";
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
-import commentsApi from "../../api/comments-api";
 import { useGetOneGames } from "../../hooks/useGames";
+import { useForm} from "../../hooks/useForm";
 import { useAuthContext } from "../../contexts/AuthContext";
-import { useForm } from "../../hooks/useForm";
+import { useGetAllComment, useCreateComment } from "../../hooks/useComments";
+
+
 
 const initialValues = {
     comment: ''
@@ -13,43 +13,21 @@ const initialValues = {
 
 export default function Details () {
     const {gameId} = useParams();
-    // const [comments, dispatch] = useGetallComments(gameId);
-    // const createComment = useCreateComment();
-    const { email, userId} = useAuthContext();
-    const [game] = useGetOneGames(gameId)
-    const [username, setUsername] = useState('');
-    const isAuthenticated = useAuthContext();
-    const [comment, setComment] = useState('')
+    const [comments, setComments] = useGetAllComment(gameId);
+    const createComment = useCreateComment();
+    const [game] = useGetOneGames(gameId);
+    const { isAuthenticated } = useAuthContext();
+
     const {
         changeHandler,
         submitHandler,
         values,
-    } = useForm(initialValues, async ({ comment}) => {
-        try {
+    } = useForm(initialValues, ({comment}) => {
+      
+        createComment(gameId, comment)
 
-        }catch {
-
-        }
-    })
+    });
    
-
-    const submitComment = async (e) => {
-        e.preventDefault();
-
-        const newComment = await commentsApi.create(gameId, username, comment);
-        
-        setGame(prevState => ({
-            ...prevState,
-            comments: {
-                ...prevState.comments,
-                [newComment._id]: newComment,
-            }
-        }));
-
-        setUsername ('');
-        setComment ('')
-    
-    }
     return (
         <section id="game-details">
         <h1>Game Details</h1>
@@ -67,18 +45,16 @@ export default function Details () {
             <div className="details-comments">
                 <h2>Comments:</h2>
                 <ul>
-                {Object.keys(game.comments || {}).length > 0
-                ? Object.values(game.comments).map(comment => (
+                {comments.map(comment => (
                          <li key={comment._id}  className="comment">
-                    <p>{comment.username}: {comment.text}</p>
+                    <p>username: {comment.text}</p>
                     </li>  
                     
-                
                   ))
-                :<p className="no-comment">No comments.</p>
-                
+        
                  }
                  </ul>
+                 {comments.length === 0 && <p className="no-comment">No comments.</p>}
    
             </div>
             {/* <div className="buttons">
@@ -86,30 +62,22 @@ export default function Details () {
                 <Link to={`/delete-game`} className="button">Delete</Link>
             </div> */}
         </div>
-
+                {isAuthenticated && (
         <article className="create-comment">
             <label>Add new comment:</label>
-            <form className="form" onSubmit = {submitComment}>
-                <input 
-                type="text"
-                 placeholder="Pesho"
-                  name="username"
-                  onChange={() => setUsername(e.target.value)} 
-                  value={username}
-                  />
+            <form className="form" onSubmit = {submitHandler}>
                 <textarea 
                 name="comment" 
                 placeholder="Comment......"
-                onChange={() => setComment(e.target.value)}
-                value={comment}
-                >
-
-                </textarea>
+                onChange={changeHandler}
+                value={values.comment}
+                ></textarea>
                 <input className="btn submit" type="submit" value="Add Comment"/>
             </form>
         </article>
-
+                )};
     </section>
 
     )
 }
+

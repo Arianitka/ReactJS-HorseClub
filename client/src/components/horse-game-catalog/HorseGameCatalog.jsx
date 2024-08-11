@@ -11,10 +11,10 @@ export default function HorseGameCatalog (){
     const [games] = useGetAllGames()
     return (
         <section id="catalog-page">
-            <h1>Horse Games</h1>    
+            <h1>Horse Events</h1>    
             {games.length > 0
             ?games.map(game=> <GameListItem key={game._id} {...game} />)
-            :  <p className="no-articles">No games yet</p>
+            :  <p className="no-articles">No horses yet</p>
             }
         </section>
     )
