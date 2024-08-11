@@ -1,4 +1,4 @@
-import { createContext } from "react"; 
+import { createContext, useContext } from "react"; 
 import { useState } from "react";
 
 
@@ -35,7 +35,13 @@ export function AuthContextProvider(props) {
         <AuthContext.Provider value={contextData}>
             {props.children}
         </AuthContext.Provider>
-    )
+    );
 
+}
+
+export function useAuthContext() {
+    const authData = useContext(AuthContext);
+
+    return  authData;
 }
 

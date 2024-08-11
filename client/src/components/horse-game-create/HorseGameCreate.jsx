@@ -40,7 +40,7 @@ export default function HorseGameCreate(){
         <form id="create" onSubmit={submitHandler}>
             <div className="container">
 
-                <h1>Create Horse Game</h1>
+
                 <label htmlFor="leg-title">Horse Game Name:</label>
                 <input type="text" id="title" name="title"
                 value={values.title}
