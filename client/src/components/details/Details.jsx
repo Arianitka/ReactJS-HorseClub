@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import commentsApi from "../../api/comments-api";
 import { useGetOneGames } from "../../hooks/useGames";
+import { useAuthContext } from "../../contexts/AuthContext";
+import { useForm } from "../../hooks/useForm";
 
 const initialValues = {
     comment: ''
@@ -11,8 +13,8 @@ const initialValues = {
 
 export default function Details () {
     const {gameId} = useParams();
-    const [comments, dispatch] = useGetallComments(gameId);
-    const createComment = useCreateComment();
+    // const [comments, dispatch] = useGetallComments(gameId);
+    // const createComment = useCreateComment();
     const { email, userId} = useAuthContext();
     const [game] = useGetOneGames(gameId)
     const [username, setUsername] = useState('');
@@ -26,7 +28,7 @@ export default function Details () {
         try {
 
         }catch {
-            
+
         }
     })
    

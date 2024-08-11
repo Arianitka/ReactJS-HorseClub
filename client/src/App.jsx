@@ -1,4 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
+import { AuthContextProvider } from './contexts/AuthContext';
+
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Login from './components/login/Login';
@@ -13,7 +15,8 @@ import Sale from './components/sale/Sale';
 import Details from './components/details/Details';
 import HorseGameCatalog from './components/horse-game-catalog/HorseGameCatalog';
 import Footer from './components/footer/Footer';
-import { AuthContextProvider } from './contexts/AuthContext';
+
+import Logout from './components/logout/Logout';
 
 
 
@@ -39,6 +42,7 @@ function App(){
             <Route path='/catalog/:gameId/details' element={<Details />}/>
             <Route path='/create-game' element={<HorseGameCreate/>}/>
             <Route path='/sale' element={<Sale/>}/>
+            <Route path='/logout' element={<Logout/>}/>
             
             
             
