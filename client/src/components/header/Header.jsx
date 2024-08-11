@@ -28,8 +28,8 @@ export default function Header() {
                 <li><Link to={`/events`}>Events</Link></li>
                 <li><Link to={`/gallery`}>Gallery</Link></li>
                 <li><Link to={`/contacts`}>Contacts</Link></li>
-                <li><Link to={`/logout`}>Logout</Link></li>
                 <li><Link to={`/catalog`}>Catalog</Link></li>
+                <li><Link to={`/logout`}>Logout</Link></li>
 
               </div>)
             : (<div id="guest">
