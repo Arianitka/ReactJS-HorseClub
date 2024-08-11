@@ -5,7 +5,7 @@ import { useCreateGame } from "../../hooks/useGames";
 const initialValues = {
     title: '',
     category: '',
-    maxLevel:'',
+    racingRank:'',
     imageUrl:'',
     summary: '',
 }
@@ -41,7 +41,7 @@ export default function HorseGameCreate(){
             <div className="container">
 
 
-                <label htmlFor="leg-title">Horse Game Name:</label>
+                <label htmlFor="leg-title">Horse Name:</label>
                 <input type="text" id="title" name="title"
                 value={values.title}
                 onChange={changeHandler}
@@ -51,8 +51,8 @@ export default function HorseGameCreate(){
                 <input type="text" id="category" name="category"  value={values.category}
                 onChange={changeHandler} placeholder="Enter game category..."/>
 
-                <label htmlFor="levels">MaxLevel:</label>
-                <input type="number" id="maxLevel" name="maxLevel" value={values.maxLevel}
+                <label htmlFor="levels">Racing rank:</label>
+                <input type="number" id="racingRank" name="racingRank" value={values.racingRank}
                 onChange={changeHandler}  min="1" placeholder="1"/>
 
                 <label htmlFor="game-img">Image:</label>
@@ -62,7 +62,7 @@ export default function HorseGameCreate(){
                 <label htmlFor="summary">Summary:</label>
                 <textarea name="summary"  value={values.summary}
                 onChange={changeHandler} id="summary"></textarea>
-                <input className="btn submit" type="submit" value="Create Game"/>
+                <input className="btn submit" type="submit" value="Add Horse"/>
             </div>
         </form>
     </section>
