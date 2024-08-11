@@ -5,13 +5,30 @@ import { useState, useEffect } from "react";
 import commentsApi from "../../api/comments-api";
 import { useGetOneGames } from "../../hooks/useGames";
 
-
+const initialValues = {
+    comment: ''
+};
 
 export default function Details () {
     const {gameId} = useParams();
-    const [game, setGame] = useGetOneGames(gameId)
+    const [comments, dispatch] = useGetallComments(gameId);
+    const createComment = useCreateComment();
+    const { email, userId} = useAuthContext();
+    const [game] = useGetOneGames(gameId)
     const [username, setUsername] = useState('');
+    const isAuthenticated = useAuthContext();
     const [comment, setComment] = useState('')
+    const {
+        changeHandler,
+        submitHandler,
+        values,
+    } = useForm(initialValues, async ({ comment}) => {
+        try {
+
+        }catch {
+            
+        }
+    })
    
 
     const submitComment = async (e) => {

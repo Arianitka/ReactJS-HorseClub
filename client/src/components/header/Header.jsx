@@ -25,7 +25,11 @@ export default function Header() {
                 <li><Link to={`/edit-game`}>Edit Game</Link></li>
                 <li><Link to={`/create-game`}>Create Game</Link></li>
                 <li><Link to={`/details`}>Details</Link></li>
+                <li><Link to={`/events`}>Events</Link></li>
+                <li><Link to={`/gallery`}>Gallery</Link></li>
+                <li><Link to={`/contacts`}>Contacts</Link></li>
                 <li><Link to={`/logout`}>Logout</Link></li>
+                <li><Link to={`/catalog`}>Catalog</Link></li>
 
               </div>)
             : (<div id="guest">
