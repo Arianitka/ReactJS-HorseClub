@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 
 export default function Events(){
+
     return (
 
         <section id="content">
@@ -9,6 +10,7 @@ export default function Events(){
       <h2 className="p5">Latest News</h2>
       <p><Link to={`/events`} className="link">7.05.2012</Link></p>
       <div className="wrap border-bot-1"> <img src="./src/images/page1-img6.jpg" alt="" className="img-indent"/></div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam molestiae voluptates cum porro nisi. Ea quia nemo, sint facere labore eveniet quisquam tempora ipsa assumenda earum laborum animi officiis ut?</p>
       <p className="clr-1">Consetetur sadipscing elitr</p>
       <p className="p3">Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed <br/>
         diam voluptua.</p>
