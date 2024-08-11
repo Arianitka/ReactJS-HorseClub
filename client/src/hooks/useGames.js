@@ -9,7 +9,7 @@ export function useGetAllGames (){
 
     useEffect(() => {
        (async () => {
-        const result = await gamesApi.getAll()
+        const result = await gamesAPI.getAll()
        
          setGames(result);
        })();
