@@ -34,7 +34,6 @@ export default function Header() {
               </div>)
             : (<div id="guest">
     
-              <li><Link to={`/events`}>Events</Link></li>
               <li><Link to={`/gallery`}>Gallery</Link></li>
               <li><Link to={`/contacts`}>Contacts</Link></li>
               <li><Link to={`/login`}>Login</Link></li>
