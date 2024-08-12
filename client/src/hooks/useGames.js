@@ -21,7 +21,15 @@ export function useGetAllGames (){
 
 export function useGetOneGames(gameId){
 
-    const [game, setGame] = useState({});
+    const [game, setGame] = useState({
+      
+        title: '',
+        category: '',
+        rankLevel: '',
+        imageUrl: '',
+        summary: '',
+    }
+    );
 
     useEffect(() => {
         (async () => {
