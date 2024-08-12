@@ -15,9 +15,8 @@ import Sale from './components/sale/Sale';
 import Details from './components/details/Details';
 import HorseGameCatalog from './components/horse-game-catalog/HorseGameCatalog';
 import Footer from './components/footer/Footer';
-
 import Logout from './components/logout/Logout';
-
+import Profile from './components/profile/Profile';
 
 
 function App(){
@@ -43,6 +42,8 @@ function App(){
             <Route path='/create-game' element={<HorseGameCreate/>}/>
             <Route path='/sale' element={<Sale/>}/>
             <Route path='/logout' element={<Logout/>}/>
+            <Route path='/profile' element={<Profile/>}/>
+           
             
             
             
