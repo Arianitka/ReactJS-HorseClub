@@ -1,0 +1,138 @@
+@import url("https://rsms.me/inter/inter.css");
+.cd__main {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+  background-color: #588b8b !important;
+  color: white;
+  height: 80vh;
+}
+
+a {
+  color: #ffd5c2;
+}
+
+.person {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  grid-row-gap: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.person__photo {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: -1;
+}
+.person__photo img {
+  max-width: 100%;
+}
+.person__name {
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+.person__header {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: flex-end;
+  padding-bottom: 2rem;
+  z-index: 2;
+}
+.person__title {
+  font-size: 1.125rem;
+}
+.person__main {
+  grid-row: 2/3;
+  padding: 0 1rem;
+}
+.person__bio {
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.person__footer {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 2rem 0 1rem;
+  z-index: 1;
+}
+.person__footer .links__list {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.person__footer .link__item {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+.person__footer .link__item svg {
+  fill: #ffd5c2;
+}
+
+.darken {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: flex-end;
+  background: linear-gradient(to top, #588b8b 0%, rgba(125, 185, 232, 0) 100%);
+  height: 50%;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: #883134;
+    padding-top: 2rem;
+  }
+
+  .person {
+    grid-template-columns: auto minmax(min-content, 300px) 1fr auto;
+    grid-template-rows: 30px repeat(3, auto) 10px;
+    grid-column-gap: 3.5rem;
+    text-align: left;
+    max-width: 800px;
+    padding: 2rem 0 0;
+  }
+  .person__photo {
+    grid-column: 2/3;
+    grid-row: 2/6;
+    box-shadow: 10px 10px 18px 0px rgba(0, 0, 0, 0.75);
+    z-index: 2;
+  }
+  .person__photo img {
+    max-width: 300px;
+  }
+  .person__header {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .person__name {
+    font-size: 3rem;
+    color: #ffd5c2;
+  }
+  .person__main {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    padding: 0;
+  }
+  .person__footer {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    padding-bottom: 0;
+  }
+  .person__footer .links__list {
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .person__footer .links__list .link__item {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+  .person .background {
+    background-color: #588b8b;
+    grid-column: 1/5;
+    grid-row: 1/5;
+    z-index: -5;
+  }
+}
