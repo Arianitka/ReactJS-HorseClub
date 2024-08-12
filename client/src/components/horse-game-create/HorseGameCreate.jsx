@@ -45,11 +45,11 @@ export default function HorseGameCreate(){
                 <input type="text" id="title" name="title"
                 value={values.title}
                 onChange={changeHandler}
-                 placeholder="Enter game title..."/>
+                 placeholder="Enter horse title..."/>
 
                 <label htmlFor="category">Category:</label>
                 <input type="text" id="category" name="category"  value={values.category}
-                onChange={changeHandler} placeholder="Enter game category..."/>
+                onChange={changeHandler} placeholder="Enter horse category..."/>
 
                 <label htmlFor="levels">Racing rank:</label>
                 <input type="number" id="racingRank" name="racingRank" value={values.racingRank}
