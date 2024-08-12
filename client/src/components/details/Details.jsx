@@ -15,7 +15,7 @@ export default function Details () {
     const {gameId} = useParams();
     const [comments, dispatch] = useGetAllComment(gameId);
     const createComment = useCreateComment();
-    const { email} = useAuthContext();
+    const { email, userId } = useAuthContext();
     const [game] = useGetOneGames(gameId);
     const { isAuthenticated } = useAuthContext();
 
@@ -35,6 +35,8 @@ export default function Details () {
         }
 
     });
+
+    const isOwner = userId === game._ownerId;
    
     return (
         <section id="game-details">
@@ -64,11 +66,14 @@ export default function Details () {
                  </ul>
                  {comments.length === 0 && <p className="no-comment">No comments.</p>}
    
-            </div>
-            {/* <div className="buttons">
-                <Link to={`/edit-game`} className="button">Edit</Link>
-                <Link to={`/delete-game`} className="button">Delete</Link>
-            </div> */}
+                </div>
+                {isOwner && (
+                    <div className="buttons">
+                    <Link to={`/edit-game`} className="button">Edit</Link>
+                    <Link to={`/delete-game`} className="button">Delete</Link>
+                    </div>
+                )}
+           
         </div>
                 {isAuthenticated && (
         <article className="create-comment">
