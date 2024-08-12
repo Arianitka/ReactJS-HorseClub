@@ -26,9 +26,9 @@ function Header({
               <div id="user">
                 <li><Link to={`/breeding`}>Breeding</Link></li>
                 <li><Link to={`/sale`}>Horse Sale</Link></li>
-                <li><Link to={`/edit-game`}>Edit Game</Link></li>
+                {/* <li><Link to={`/edit-game`}>Edit Game</Link></li> */}
                 <li><Link to={`/create-game`}>Add Horse</Link></li>
-                <li><Link to={`/details`}>Details</Link></li>
+                {/* <li><Link to={`/details`}>Details</Link></li> */}
                 {/* <li><Link to={`/events`}>Events</Link></li> */}
                 <li><Link to={`/gallery`}>Gallery</Link></li>
                 <li><Link to={`/contacts`}>Contacts</Link></li>

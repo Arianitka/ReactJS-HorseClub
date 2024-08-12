@@ -38,10 +38,16 @@ export default function Details () {
     });
     
         const gameDeleteHandler = async () => {
+            const confirmation = confirm('Delete horse?');
+
+            if(!confirmation){
+                return;
+            }
+    
             try {
                 await gamesAPI.remove(gameId);
 
-                navigate ('/')
+                navigate ('/catalog')
             } catch (err) {
                 console.log(err.message)
             }
@@ -81,7 +87,7 @@ export default function Details () {
                 </div>
                 {isOwner && (
                     <div className="buttons">
-                    <Link to={`/edit-game`} className="button">Edit</Link>
+                    <Link to={`/games/${gameId}/edit-horse`} className="button">Edit</Link>
                     <Link to={``} onClick={gameDeleteHandler}className="button">Delete</Link>
                     </div>
                 )}

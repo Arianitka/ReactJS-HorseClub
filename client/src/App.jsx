@@ -35,7 +35,7 @@ function App(){
             <Route path='/breeding' element={<Breeding />}/>
             <Route path='/contacts' element={<Contacts />}/>
             <Route path='/details' element={<Details />}/>
-            <Route path='/edit-game' element={<EditHorseGame />}/>
+            <Route path='/games/:gameId/edit-horse' element={<EditHorseGame />}/>
             <Route path='/events' element={<Events />}/>
             <Route path='/gallery' element={<Gallery />}/>
             <Route path='/catalog' element={<HorseGameCatalog />}/>
