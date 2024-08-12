@@ -44,6 +44,5 @@ export function useCreateGame (){
 
   return gameCreateHandler;
 
-
-
 }
+
