@@ -5,27 +5,16 @@ import { useGetOneGames } from "../../hooks/useGames";
 import { useNavigate} from "react-router-dom";
 import gamesAPI from "../../api/games-api";
 
-const initialValues = {
-    title: '',
-    category: '',
-    rankLevel: '',
-    imageUrl: '',
-    summary: '',
-};
 
 export default function EditHorseGame (){
     const navigate = useNavigate();
     const { gameId} = useParams();
-
-   
-
-
-    const [game, setGame] = useGetOneGames(gameId);
+    const [game] = useGetOneGames(gameId);
     const {
         changeHandler,
         submitHandler,
         values,
-    } = useForm(Object.assign(initialValues, game), async (values) => {
+    } = useForm(game, async (values) => {
         const confirmation = confirm('Update horse?');
 
         if(confirmation){
@@ -33,8 +22,7 @@ export default function EditHorseGame (){
               navigate(`/catalog`)
         }
 
-
-    });
+    }, {reinitalizeForm: true });
 
 
     return (
