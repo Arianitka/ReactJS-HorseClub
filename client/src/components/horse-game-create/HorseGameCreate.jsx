@@ -52,7 +52,7 @@ export default function HorseGameCreate(){
                 onChange={changeHandler} placeholder="Enter horse category..."/>
 
                 <label htmlFor="levels">Racing rank:</label>
-                <input type="number" id="racingRank" name="racingRank" value={values.racingRank}
+                <input type="text" id="racingRank" name="racingRank" value={values.racingRank}
                 onChange={changeHandler}  min="1" placeholder="1"/>
 
                 <label htmlFor="game-img">Image:</label>
