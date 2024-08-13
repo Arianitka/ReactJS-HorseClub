@@ -1,6 +1,25 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { useForm } from "../../hooks/useForm";
+import { useEffect } from "react";
+
+
+const initialValues = { email: '', name:'', phone: '', message: ''};
+
 
 export default function Contacts(){
+  const clearHandler = () => {
+    setValues(initialValues)
+}
+  const { values, changeHandler, submitHandler, setValues } = useForm(
+    initialValues,
+ );
+
+
+useEffect(()=>{
+console.log(values)
+},[values])
+
+
     return (
 <section id="content">
   <div className="container_12 top-4">
@@ -21,21 +40,35 @@ export default function Contacts(){
     <div className="grid_8">
       <div className="left-1">
         <h2>Contact Form</h2>
-        <form id="form" method="post" action="#">
+        <form id="form" onSubmit={submitHandler} method="post" action="#">
           <fieldset>
             <label><strong>Name:</strong>
-              <input type="text" value=""/>
+              <input type="text"
+              name="name"
+               value={values.name}
+               onChange={changeHandler}
+               />
             </label>
             <label><strong>Email:</strong>
-              <input type="text" value=""/>
+              <input type="text" 
+              name="email"
+              value={values.email}
+              onChange={changeHandler}
+              />
             </label>
             <label><strong>Phone:</strong>
-              <input type="text" value=""/>
+              <input type="text"
+              name="phone"
+               value={values.phone}
+               onChange={changeHandler}
+               />
             </label>
             <label><strong>Message:</strong>
-              <textarea></textarea>
+            <textarea onChange ={changeHandler}  name="message" id="message" value={values.message}></textarea>
             </label>
-            <div className="btns"><Link to={`/`} className="button">Clear</Link><Link to={`/`} className="button">Send</Link></div>
+
+            <div className="btns"><Link to={``} className="button" onClick={clearHandler}>Clear</Link>
+            <Link to={``} className="button">Send</Link></div>
           </fieldset>
         </form>
       </div>
