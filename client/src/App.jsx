@@ -16,7 +16,11 @@ import Details from './components/details/Details';
 import HorseGameCatalog from './components/horse-game-catalog/HorseGameCatalog';
 import Footer from './components/footer/Footer';
 import Logout from './components/logout/Logout';
+import AuthGuard from './components/guard/AuthGuard';
 import Profile from './components/profile/Profile';
+
+
+
 
 
 function App(){
@@ -39,11 +43,10 @@ function App(){
             <Route path='/gallery' element={<Gallery />}/>
             <Route path='/catalog' element={<HorseGameCatalog />}/>
             <Route path='/catalog/:gameId/details' element={<Details />}/>
-            <Route path='/create-game' element={<HorseGameCreate/>}/>
+            <Route path='/create-game' element={<AuthGuard><HorseGameCreate/></AuthGuard>}/>
             <Route path='/sale' element={<Sale/>}/>
             <Route path='/logout' element={<Logout/>}/>
             <Route path='/profile' element={<Profile/>}/>
-           
             
             
             

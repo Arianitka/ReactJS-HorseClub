@@ -56,7 +56,7 @@ const buildOptions = (data) => {
         }
     }
 
-    token = localStorage.getItem('accessToken');
+    token =  getaccessToken();
 
 
     if (token) {
@@ -66,7 +66,7 @@ const buildOptions = (data) => {
         }
     }
 
-    // console.log(options);
+    console.log(options);
 
     return options;
 }

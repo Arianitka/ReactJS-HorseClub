@@ -25,9 +25,12 @@ import { useEffect, useState } from "react";
         
         setValues(initialValues);
     }
+
+    
     return {
         values,
         changeHandler,
         submitHandler,
+        setValues
     }
 }
