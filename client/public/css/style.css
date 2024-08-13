@@ -517,8 +517,9 @@ dl.adr dd a:hover {
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    background: #3e4443;
+    background: lightblue;
     box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
+	color: black;
 }
 
 #register-page {
@@ -528,7 +529,7 @@ dl.adr dd a:hover {
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    background: #3e4443;
+    background: lightblue;
     box-shadow: 0px 0px 32px 0px #49535e, -14px -14px 20px #191c21;
 }
 
@@ -570,7 +571,7 @@ input {
 label {
     margin-bottom: 8px;
     font-size: 27px;
-    color: white;
+    color: black;
     margin-top: 13px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -611,7 +612,7 @@ label[for="terms"]>input {
     background: #778e9c;
     height: 60px;
     border-radius: 20px;
-    color: white;
+    color: black;
     font-size: 26px;
     cursor: pointer;
     font-weight: 900;
@@ -680,13 +681,39 @@ textarea {
 }
 
 #catalog-page {
-    background-color: transparent;
+	display:inline;
+	float:left;
+	position:relative;
+	margin:0 10px;
+	background-color: black;
     box-shadow: 0px 0px 40px 0px;
     overflow: hidden;
     border-radius: 10px;
     padding: 20px;
     height: auto;
     width: 900px;
+}
+.allGames {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    margin: 15px;
+    overflow: hidden;
+    width: 600px auto;
+    min-height: 210px;
+    height: auto;
+}
+#catalog-page {
+    background-color: black;
+    box-shadow: 0px 0px 40px 0px;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    height: auto;
+    width: 900px;
+	
 }
 
 #catalog-page>h1 {
@@ -697,7 +724,7 @@ textarea {
     margin-top: 10px;
     text-transform: uppercase;
     text-align: center;
-}
+} */
 
 .allGames {
     background-color: #fff;
@@ -716,6 +743,10 @@ textarea {
     padding: 30px;
     position: relative;
     width: 100%;
+	display:inline;
+	float:left;
+	position:relative;
+	margin:0 10px
 }
 
 .allGames-info>img {
@@ -765,6 +796,10 @@ textarea {
     overflow: hidden;
     border-radius: 10px;
     transition: all 0.4s;
+	display:inline;
+	float:left;
+	
+	
 }
 
 #game-details>h1 {
@@ -772,6 +807,7 @@ textarea {
     font-family: "Agency FB";
     font-size: 55px;
     font-weight: 700;
+	
     margin-bottom: 40px;
     text-transform: uppercase;
     text-align: center;
@@ -785,16 +821,22 @@ textarea {
     z-index: 2;
     border-radius: 10px;
     background-color: black;
+	color: white;
 }
 
 .game-header {
     position: relative;
     padding: 25px;
     height: 40%;
+	color: white;
+	
+}
+.game-header.text {
+	color: white;
 }
 
 .game_header>h1 {
-    color: white;
+    color: blue;
     margin-top: 5px;
     font-size: 36px;
     font-weight: 400;
@@ -882,34 +924,3 @@ textarea {
     background-color: #6f5d9c;
     color: white;
 }
-/* 
-.profileContainer {
-	background-color: '#fff';
-	padding: 20px;
-	border-radius: '10px';
-	box-shadow: '0 4px 8px rgba(0, 0, 0, 0.1)';
-	text-align: 'center';
-	width: '300px';
-	margin: 'auto';
-	font-family: 'Arial, sans-serif';
-}
-
-.profileImage{
-	border-radius: '50%',
-	width: 100px
-	hei: '100px',
-	objectFit: 'cover',
-}
-profileName: {
-	fontSize: '24px',
-	margin: '10px 0',
-},
-profileEmail: {
-	fontSize: '16px',
-	color: '#666',
-},
-profileHorse: {
-	fontSize: '16px',
-	color: '#333',
-	marginTop: '15px',
-}, */
