@@ -42,7 +42,7 @@ export default function EditHorseGame (){
                 <input onChange={changeHandler} type="text" id="category" name="category" value={values.category}/>
 
                 <label htmlFor="levels">Rank level:</label>
-                <input onChange ={changeHandler} type="number" id="maxLevel" name="maxLevel" min="1" value={values.rankLevel}/>
+                <input onChange ={changeHandler} type="text" id="maxLevel" name="maxLevel" min="1" value={values.rankLevel}/>
 
                 <label htmlFor="game-img">Image:</label>
                 <input onChange ={changeHandler} type="text" id="imageUrl" name="imageUrl" value={values.imageUrl}/>
