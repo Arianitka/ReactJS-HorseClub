@@ -44,10 +44,10 @@ function Header({
     
               <li><Link to={`/gallery`}>Gallery</Link></li>
               <li><Link to={`/contacts`}>Contacts</Link></li>
+              <li><Link to={`/catalog`}>Horses catalog</Link></li>
+              {/* <li><Link to={`/details`}>Details</Link></li> */}
               <li><Link to={`/login`}>Login</Link></li>
               <li><Link to={`/register`}>Register</Link></li>
-              <li><Link to={`/catalog`}>Horses catalog</Link></li>
-              <li><Link to={`/details`}>Details</Link></li>
             </div>)
           }    
   </ul>

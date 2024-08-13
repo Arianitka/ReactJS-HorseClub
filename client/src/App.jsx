@@ -16,9 +16,8 @@ import Details from './components/details/Details';
 import HorseGameCatalog from './components/horse-game-catalog/HorseGameCatalog';
 import Footer from './components/footer/Footer';
 import Logout from './components/logout/Logout';
-import AuthGuard from './components/guard/AuthGuard';
+import PrivateGuard from './components/guard/PrivateGuard';
 import Profile from './components/profile/Profile';
-
 
 
 
@@ -35,20 +34,22 @@ function App(){
             <Route path='/' element={<Home />}/>
             <Route path='/login' element={<Login />}/>
             <Route path='/register' element={<Register />}/>
-            <Route path='/breeding' element={<Breeding />}/>
             <Route path='/contacts' element={<Contacts />}/>
             <Route path='/details' element={<Details />}/>
-            <Route path='/games/:gameId/edit-horse' element={<EditHorseGame />}/>
             <Route path='/events' element={<Events />}/>
             <Route path='/gallery' element={<Gallery />}/>
             <Route path='/catalog' element={<HorseGameCatalog />}/>
             <Route path='/catalog/:gameId/details' element={<Details />}/>
-            <Route path='/create-game' element={<AuthGuard><HorseGameCreate/></AuthGuard>}/>
-            <Route path='/sale' element={<Sale/>}/>
-            <Route path='/logout' element={<Logout/>}/>
-            <Route path='/profile' element={<Profile/>}/>
-            
-            
+            <Route element= {<PrivateGuard/>}>
+                <Route path='/create-game/' element={<HorseGameCreate/>} />
+                <Route path='/games/:gameId/edit-horse' element={<EditHorseGame />}/>
+                <Route path='/logout' element={<Logout/>}/>
+                <Route path='/sale' element={<Sale/>}/>
+                <Route path='/breeding' element={<Breeding />}/>
+                <Route path='/profile' element={<Profile/>}/>
+
+            </Route>
+            {/* <Route path='/create-game' element={<AuthGuard><HorseGameCreate/></AuthGuard>}/> */}
             
                 </Routes>   
 

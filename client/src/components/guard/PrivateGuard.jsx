@@ -2,7 +2,7 @@ import { Navigate } from "react-router";
 import { useAuthContext } from "../../contexts/AuthContext"
 
 
-export default function AuthGuard({ children }) {
+export default function PrivateGuard() {
     const { isAuthenticated } = useAuthContext();
 
     
