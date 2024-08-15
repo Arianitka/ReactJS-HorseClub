@@ -249,6 +249,7 @@ nav {
 	width:940px;
 	font-size: 5px;
 	margin:0 auto;
+	
 	z-index:100;
 	padding:5px 0px 11px 0px;
 }
@@ -259,6 +260,7 @@ ul.menu li {
 	float:left;
 	line-height:24px;
 	margin:0px 28px 0px 4px;
+	list-style: none;
 }
 ul.menu li a {
 	font-size:18px;
@@ -340,6 +342,14 @@ ul.menu li a:hover, ul.menu li.current a {
 	width:286px;
 	margin-right:32px;
 }
+
+.img-pags ul{
+	display: flex;
+	list-style: none;
+	gap: 20px;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
 /****************************footer************************/
 footer {
 	width:940px;
@@ -388,6 +398,28 @@ footer h3 {
 }
 #form-search a:hover {
 	background-color:#636f6f;
+}
+
+.contact-form fieldset {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+.contact-form input {
+	width: 400px !important;
+	height: 35px !important;
+	margin-left: 30px !important;
+}
+
+.contact-form textarea {
+	width: 500px !important;
+	margin-left: 50px !important;
+}
+.contact-form label{
+color: white;
+display: flex !important;
+align-items: center;
+margin-right: 30px;
 }
 .footer-col-2 {
 	float:left;
@@ -612,7 +644,7 @@ label[for="terms"]>input {
     background: #778e9c;
     height: 60px;
     border-radius: 20px;
-    color: black;
+    color: white;
     font-size: 26px;
     cursor: pointer;
     font-weight: 900;
@@ -650,7 +682,7 @@ label[for="terms"]>input {
     padding: 40px;
     box-sizing: border-box;
     text-align: center;
-    background: #3e4443;
+    background: lightblue;
     box-shadow: 0px 0px 32px 0px #32485e, -14px -14px 20px #191c21;
 }
 
@@ -694,7 +726,7 @@ textarea {
     width: 900px;
 }
 .allGames {
-    background-color: #fff;
+    background-color:lightgrey;
     border-radius: 10px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -706,6 +738,8 @@ textarea {
     height: auto;
 }
 #catalog-page {
+	display: flex;
+	flex-direction: column;
     background-color: black;
     box-shadow: 0px 0px 40px 0px;
     overflow: hidden;
@@ -717,6 +751,8 @@ textarea {
 }
 
 #catalog-page>h1 {
+	display: block;
+
     color: #fff;
     font-family: "Agency FB";
     font-size: 48px;
@@ -740,6 +776,8 @@ textarea {
 }
 
 .allGames-info {
+	display: flex !important;
+	flex-direction: column;
     padding: 30px;
     position: relative;
     width: 100%;
@@ -750,12 +788,14 @@ textarea {
 }
 
 .allGames-info>img {
+	
     margin-top: -10px;
     border-radius: 50%;
     height: 140px;
     position: absolute;
     top: 30px;
-    right: 30px;
+	left: 50%;
+    /* right: 30px; */
     float: right;
     padding: 5px;
     width: 140px;
@@ -774,6 +814,7 @@ textarea {
 }
 
 .details-button {
+	align-self: flex-end;
     background-color: #2A265F;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
     color: #fff;
@@ -913,14 +954,28 @@ textarea {
 
 .button {
     height: 15%;
+	margin-right: 10px;
     background-color: #54557b;
     padding: 14px;
     margin-top: auto;
     font-size: 21px;
     color: rgb(255, 255, 255);
+
+	border-radius: 5px;
 }
 
 .button:hover {
     background-color: #6f5d9c;
     color: white;
+}
+
+.profileContainer{
+	width: 150px;
+	height: 150px;
+	/* overflow: hidden; */
+}
+
+.profileContainer img {
+	width: 150px;
+	height: auto;
 }

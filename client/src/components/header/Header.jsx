@@ -14,15 +14,15 @@ function Header({
         <h1><Link to="index.html"><img src="./src/images/logo.png" alt="" /></Link></h1>
         <div className="social-icons"> <span>Follow Us:</span>
           <div> 
-          <Link to="https://www.instagram.com" target="_blank" className="icon-3"><img src="./src/images/icon-3.png" alt="" /></Link> 
-          <Link to="https://www.facebook.com" target="_blank" className="icon-2"><img src="./src/images/icon-2.png" alt="" /> </Link>
-          <Link to="https://www.twitter.com" target="_blank" className="icon-1"><img src="./src/images/icon-1.png" alt="" /></Link> </div>
+          <Link to="https://www.instagram.com" target="_blank" className="icon-3"><img src="/src/images/icon-3.png" alt="" /></Link> 
+          <Link to="https://www.facebook.com" target="_blank" className="icon-2"><img src="/src/images/icon-2.png" alt="" /> </Link>
+          <Link to="https://www.twitter.com" target="_blank" className="icon-1"><img src="/src/images/icon-1.png" alt="" /></Link> </div>
         </div>
         <div className="clear"></div>
       </div>
       <nav>
         <ul className="menu">
-          <li className="current"><Link to={`/`}>Home</Link></li>
+          <li className=""><Link to={`/`}>Home</Link></li>
 
           {isAuthenticated
             ? (

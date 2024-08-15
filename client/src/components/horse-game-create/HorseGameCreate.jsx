@@ -20,7 +20,7 @@ export default function HorseGameCreate(){
         try {
             const { _id: gameId } = await createGame(values);
 
-            navigate(`/games/${gameId}/details`)
+            navigate(`/catalog`)
         } catch (err) {
             console.log(err.message);
 

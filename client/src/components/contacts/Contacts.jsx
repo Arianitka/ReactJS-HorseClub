@@ -40,7 +40,7 @@ console.log(values)
     <div className="grid_8">
       <div className="left-1">
         <h2>Contact Form</h2>
-        <form id="form" onSubmit={submitHandler} method="post" action="#">
+        <form id="form" className="contact-form" onSubmit={submitHandler} method="post" action="#">
           <fieldset>
             <label><strong>Name:</strong>
               <input type="text"

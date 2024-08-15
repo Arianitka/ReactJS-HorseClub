@@ -21,10 +21,10 @@ const myGames = games.filter(x=> x._ownerId === userId);
                 alt="Profile"
             />
             {/* <h1 style={styles.profileName}>{name}</h1> */}
-            <p className="profileEmail">Email:{email}</p>
-            <p className="addedHorse"><strong>Added Horse:</strong>
+            <p className="profileEmail"><h3>Email:{email}</h3></p>
+            <p className="addedHorse"><strong></strong>
             <section id="catalog-page">
-            <h1>Horses Catalog</h1>    
+            <h1>Added Horse:</h1>    
             {myGames.length > 0
             ?myGames.map(game=> <GameListItem key={game._id} {...game} />)
             :  <p className="no-articles">No horses yet</p>
